@@ -137,10 +137,10 @@ def rl_scrape():
             src = ("https://rocket-league.com" + img['src']).strip()
             
             # get the same of the item
-            name = img.h2.get_text().strip().replace(" ", "_")
+            name = t.h2.get_text().strip().replace(" ", "_")
             
             # get the rarity of the item
-            rarity = img.div.get_text().strip()
+            rarity = t.div.get_text().strip()
             
             # set up the file path
             file_path = "{}/{}/{}.png".format(key, rarity, name)
